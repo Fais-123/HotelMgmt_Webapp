@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T_accounts</title>
+    <style>
+        .t-account {
+            border-collapse: collapse;
+        }
+        
+        .t-account th,
+        .t-account td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        
+        .t-account th {
+            background-color: #f0f0f0;
+        }
+        
+        .t-account td:nth-child(1) {
+            text-align: right;
+        }
+        
+        .t-account td:nth-child(2) {
+            text-align: right;
+        }
+        
+    </style>
+</head>
+<body>
+   {% for i in balances%}
+   <li>{{ i }}</li>
+   {% endfor %}
+    
+
+</body>
+</html>

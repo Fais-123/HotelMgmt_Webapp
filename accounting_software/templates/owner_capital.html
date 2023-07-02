@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>owner capital</title>
+    <style>
+        body {
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+        .card {
+            width: 300px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            margin-top: 160px;
+          }
+          
+          .card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+          }
+          
+          .card-body {
+            padding: 20px;
+          }
+          
+          .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          }
+          
+          .summary-label {
+            font-weight: bold;
+          }
+          
+          .summary-value {
+            color: #333;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+Owner Capital Statement        </div>
+        <div class="card-body">
+          <div class="summary-item">
+            <div class="summary-label">Net Income:</div>
+            <div class="summary-value">{{ net_income }}</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Capital:</div>
+            <div class="summary-value">{{ capital_total }}</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Drawings:</div>
+            <div class="summary-value">{{ drawings_total }}</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-label">Total:</div>
+            <div class="summary-value">{{ total }}</div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>

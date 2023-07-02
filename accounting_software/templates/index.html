@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AccuBooks - Accounting Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "open sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Navbar Styles */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+        }
+        
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .sidebar a:hover {
+            color: #ffd700;
+        }
+        
+        /* Content Styles */
+        .content {
+            margin-left: 240px;
+            padding: 40px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Custom Styles */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        /* Color Scheme */
+        body {
+            background-color: #f7f7f7;
+        }
+        
+        .sidebar {
+            background-color: #333;
+        }
+        
+        .sidebar h2 {
+            color: #ffd700;
+        }
+        
+        .sidebar a {
+            color: #fff;
+        }
+        
+        .sidebar a:hover {
+            color: #ffd700;
+        }
+        
+        .content {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .top-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .top-icons i {
+            font-size: 24px;
+            color: skyblue;
+            margin-top: 20px;
+            margin-left: 12px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+      
+
+        button {
+            font-family: 'open sans' sans-serif;
+            float: right;
+            border-radius: 30px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffd700;
+            color: #333;
+        }
+      
+    </style>
+</head>
+<body>
+    <!-- Side Navbar -->
+ 
+    <div class="sidebar">
+        
+        <div class="logo">
+            <img src="{% static 'img/p1.avif' %}" alt="Picture 1">
+            <h2>AccuBooks</h2>
+        </div>
+        <h2>Financial Statements</h2>
+
+        <ul>
+            <li><a href="income_statement">Income Statement</a></li>
+            <li><a href="owner_capital">Owner Equity Statement</a></li>
+            <li><a href="balance_sheet">Balance Sheet</a></li>
+            <li><a href="t_account">T-Accounts</a></li>
+            <li><a href="trial_balance">Trial Balance</a></li>
+            <li><a href="about">About us</a></li>
+        </ul>
+
+        <h2>Accounts</h2>
+
+        <ul>
+            <li><a href="account">Create Account</a></li>
+            <li><a href="create_transaction">Create Transaction</a></li>
+            <li><a href="save_entries">Make Entry</a></li>
+           
+        </ul>
+
+    </div>
+    
+
+    <!-- Main Content -->
+    <div class="content">
+
+        
+            {% if user.is_authenticated %}
+            <button onclick="location.href='registration/logout'">Logout</button>
+            {% else %}
+            <button onclick="location.href='registration/login'">Login</button>
+            <button onclick="location.href='registration/register'">Register</button>
+            {% endif %}
+    
+        <h1>Welcome to AccuBooks</h1>
+        <p>
+            AccuBooks is a comprehensive accounting software designed to streamline your financial management processes,
+            ensuring accuracy, efficiency, and compliance.
+        </p>
+        <p>
+            With AccuBooks, you can easily create and manage financial statements such as the Income Statement,
+            Owner Equity Statement, Balance Sheet, and Trial Balance.
+        </p>
+        <p>
+            Track your company's financial health, monitor cash flows, and analyze profitability with ease.
+            AccuBooks provides comprehensive reporting and analysis tools to help you make informed business decisions.
+        </p>
+        <p>
+            Whether you are a small business owner, a finance professional, or an accountant, AccuBooks is tailored
+            to meet your specific needs and simplify your financial processes.
+        </p>
+   
+    </div>
+
+</body>
+</html>

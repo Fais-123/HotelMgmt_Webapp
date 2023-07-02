@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - AccuBooks</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <style>
+        body {
+            font-family: "open sans", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>
+            AccuBooks is a leading provider of accounting software designed to help businesses manage their financial processes efficiently and accurately.
+        </p>
+        <p>
+            Our software offers a wide range of features to facilitate financial management, including the following financial statements:
+        </p>
+
+        <img style="width: 360px; float:right" src="{% static 'img/p2.png' %}" alt="Picture 2">
+
+        <ul>
+
+            <li><span class="highlight">Income Statement:</span> Provides a summary of a company's revenues, expenses, and net income or loss for a specific period.</li>
+            <li><span class="highlight">Owner Equity Statement:</span> Shows changes in the owner's equity over a specific time period, including investments, withdrawals, and retained earnings.</li>
+            <li><span class="highlight">Balance Sheet:</span> Presents a snapshot of a company's financial position, including its assets, liabilities, and owner's equity, at a specific point in time.</li>
+            <li><span class="highlight">T-Accounts:</span> Used to visualize the effects of transactions on specific accounts, showing debits and credits.</li>
+            <li><span class="highlight">Trial Balance:</span> Summarizes all the balances of accounts in the general ledger to ensure they are in balance before preparing financial statements.</li>
+        </ul>
+        <p>
+            In addition to these financial statements, AccuBooks also provides comprehensive account management functionalities. You can easily create and manage accounts, track transactions, and make journal entries.
+        </p>
+        <p>
+            To get started, simply navigate to the following sections in our software:
+        </p>
+        <ul>
+            <li><span class="highlight">Accounts:</span> Manage your accounts, including creating new accounts and updating existing ones.</li>
+            <li><span class="highlight">Create Account:</span> Add a new account to the system, providing all the necessary details.</li>
+            <li><span class="highlight">Create Transaction:</span> Record a new transaction, specifying the accounts involved and the corresponding debit and credit amounts.</li>
+            <li><span class="highlight">Make Entry:</span> Enter journal entries to record the effects of various transactions on the accounts.</li>
+        </ul>
+        <p>Our accounting website offers a range of services that help businesses manage their finances. We specialize in creating financial statements, including income statements, owner equity statements, and balance sheets. Our team of experts also uses T-Accounts, trial balances, and accounts to keep track of your transactions.
+        With our easy-to-use platform, you can create an account, make transactions, and enter data with ease. We understand that managing finances can be overwhelming, which is why we offer personalized support and guidance every step of the way.
+        </p>
+    </div>
+   
+</body>
+</html>

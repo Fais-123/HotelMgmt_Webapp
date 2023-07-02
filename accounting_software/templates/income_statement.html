@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<head>
+  <title>Income Statement</title>
+  <style>
+        body {
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .revenue-row {
+            background-color: #e6f7ea;
+            color: #4caf50;
+        }
+
+        .expense-row {
+            background-color: #ffe5e5;
+            color: #f44336;
+        }
+
+        .net-income-row {
+            background-color: #e8eaf6;
+            color: #673ab7;
+        }
+    </style>
+</head>
+<body>
+  <h1>Income Statement</h1>
+
+<h2>Debit Revenues</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Account Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for revenue in income_statement.debit_revenues %}
+    <tr>
+      <td>{{ revenue.debit_account_id__name }}</td>
+      <td>{{ revenue.amount }}</td>
+    </tr>
+    {% endfor %}
+   
+  </tbody>
+</table>
+
+<h2>Credit Revenues</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Account Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for revenue in income_statement.credit_revenues %}
+    <tr>
+      <td>{{ revenue.credit_account_id__name }}</td>
+      <td>{{ revenue.amount }}</td>
+    </tr>
+    {% endfor %}
+   
+  </tbody>
+</table>
+
+
+<h2>Debit Expenses</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Account Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for expense in income_statement.debit_expenses %}
+    <tr>
+      <td>{{ expense.debit_account_id__name }}</td>
+      <td>{{ expense.amount }}</td>
+    </tr>
+    {% endfor %}
+   
+  </tbody>
+</table>
+
+
+<h2>Credit Expenses</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Account Name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+    {% for expense in income_statement.credit_expenses %}
+    <tr>
+      <td>{{ expense.credit_account_id__name }}</td>
+      <td>{{ expense.amount }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+    <h1>Summary</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="revenue-row">
+                <td>Revenue Total</td>
+                <td class="highlight">{{ income_statement.revenue_total }}</td>
+            </tr>
+            <tr class="expense-row">
+                <td>Expense Total</td>
+                <td class="highlight">{{ income_statement.expense_total }}</td>
+            </tr>
+            <tr class="net-income-row">
+                <td>Net Income</td>
+                <td class="highlight">{{ income_statement.net_income }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

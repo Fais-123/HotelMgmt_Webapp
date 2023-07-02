@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<head>
+  <title>Trial Balance</title>
+  <style>
+            body {
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+        
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+        
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+        
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        
+            tr:hover {
+                background-color: #e9e9e9;
+            }
+        </style>
+    </head>
+<body>
+        <h3>Trial Balance</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Account</th>
+                    <th>Debit Amount</th>
+                    <th>Credit Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for t_account in t_account_list %}
+                    <tr>
+                        <td>{{ t_account.account.name }}</td>
+                        <td>{{ t_account.debit_amount }}</td>
+                        <td>{{ t_account.credit_amount }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td style="font-weight: bold;">Total</td>
+                    <td>{{total_debit}}</td>
+                    <td>{{total_credit}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    
+</body>
+</html>

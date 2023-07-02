@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .error-container {
+            text-align: center;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 20px;
+            color: #721c24;
+        }
+
+        .error-container .error-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <span class="error-icon">&#10060;</span>
+        <h1>Error Occurred</h1>
+        <p>{{ message }}</p>
+    </div>
+</body>
+</html>

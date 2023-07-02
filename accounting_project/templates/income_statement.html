@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<head>
+  <title>Balance Sheet</title>
+  <style>
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+    }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .assets {
+            background-color: lightblue;
+        }
+        .liabilities-equity {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABELIAN CORPORATION INCOME STATEMENT</h1>
+
+    <table>
+        <tr class="assets">
+            <th>REVENUES</th>
+            <th>Balance</th>
+        </tr>
+        {% for account, balance in revenues.items %}
+        <tr>
+            <td>{{ account }}</td>
+            <td>{{ balance }}</td>
+            <td>{{ total }}</td>
+        </tr>
+        {% endfor %}
+        <tr class="liabilities-equity">
+            <th>EXPENSES</th>
+            <th>Balance</th>
+        </tr>
+        {% for account, balance in expenses.items %}
+        <tr>
+            <td>{{ account }}</td>
+            <td>{{ balance }}</td>
+            <td>{{ total }}</td>
+
+        </tr>
+        {% endfor %}
+        <tr>
+          <td> <strong>Net Income = </strong> {{net_income}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+

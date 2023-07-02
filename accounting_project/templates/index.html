@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<head>
+  <title>Accounting Software</title>
+  <style>
+    /* Sidebar Styles */
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+    }
+    
+    .sidebar {
+      background-color: #293241;
+      color: #fff;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+    }
+    
+    .sidebar-logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .sidebar-menu {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .sidebar-menu li {
+      margin-bottom: 15px;
+    }
+    
+    .sidebar-menu li a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar-menu li a i {
+      margin-right: 15px;
+    }
+    
+    .sidebar-menu li a:hover {
+      background-color: #1e2b38;
+    }
+    
+    .sidebar-menu li.active a {
+      background-color: #1e2b38;
+    }
+    
+    /* Content Styles */
+    .content {
+      margin-left: 600px; /* Adjust this value to match the sidebar width */
+      padding: 30px;
+    }
+    
+    /* Example Styles for the Main Content */
+    h1 {
+      color: #293241;
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    
+    p {
+      color: #555;
+      line-height: 1.5;
+      font-size: 18px;
+    }
+     form input[type="text"]{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+     
+    input[type="text"]
+ {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-logo">Accounting Software</div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="income_statement"><i class="fa fa-file-text"></i> Income Statement</a></li>
+      <li><a href="owner_capital"><i class="fa fa-users"></i> Owners Capital</a></li>
+      <li><a href="balance_sheet"><i class="fa fa-balance-scale"></i> Balance Sheet</a></li>
+      <li><a href="account_entry"><i class="fa fa-balance-scale"></i> Accounts Entry</a></li>
+      <!-- Add more sidebar menu items as needed -->
+    </ul>
+  </div>
+  
+  <div class="content">
+    <h1>Welcome to the Accounting Software</h1>
+    <!-- <form action="save_transaction_form" method="post">
+      {% csrf_token %}
+
+  <label for="account1">Account 1:</label>
+  <input type="text" id="account1" name="account1"> <br>
+
+  <label for="account2">Account 2:</label>
+  <input type="text" id="account2" name="account2"> <br>
+
+  <label for="credit_amount">Credit Amount:</label>
+  <input type="text" id="credit_amount" name="credit_amount"> <br>
+
+  <label for="debit_amount">Debit Amount:</label>
+  <input type="text" id="debit_amount" name="debit_amount"> <br>
+
+  <label for="date">Date:</label>
+  <input type="text" id="date" name="date"> <br>
+
+  <input type="submit" value="Submit">
+</form>  -->
+
+  </div>
+</body>
+</html>
